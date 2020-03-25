@@ -41,7 +41,8 @@ $ virualenv cobot
 $ pip install flask
 $ pip install twilio
 $ pip install request
-```
+
 ### References
 [Medium tutorial](https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio)
+
 [Covid API](https://github.com/javieraviles/covidAPI)
