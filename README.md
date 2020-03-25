@@ -1,4 +1,4 @@
-# 🛡 CoBot-Self-Analysis tool for COVID19
+# 🛡 CoBot-Myth buster tool for COVID19
 [![GitHub license](https://img.shields.io/github/license/Jatin-8898/covid-bot?logo=MIT)](https://github.com/arun925/cobot-self-analysis/blob/master/LICENSE)
 ![Python Badge](https://img.shields.io/badge/Made%20with-Python-blue)
 
@@ -9,11 +9,8 @@ It also provides some prevention measures inspired from the Government of India 
 ## 🚀 Features
 - Stats of Corona Virus cases WorldWide
 - Stats of Corona Virus cases happening in India
-- Stats of Corona Virus cases happening in Indian statewise details
-- Contact details for statewise government phone numbers
 - How does it spread and how to prevent it?
-- Hospital and bed information - Statewise
-- Finding Fake news
+- Finding Fake news or myth busters
 - Self Analysis questions
 
 ##  💻 Prereqisites
