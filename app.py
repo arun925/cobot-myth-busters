@@ -58,46 +58,79 @@ def bot():
         responded = True
 
     if 'A' in incoming_msg:
-        text = f'👇 Choose any below options to get the correct news on few myths (Source WHO (Myth busters))\n *1*. *Do you still believe hot/humid climate does not spread Corona ? ' \
-               f' \n *2*. Does Cold weather and snow CANNOT kill the new coronavirus. \n *3*. Taking hot bath to kill virus ? ' \
-               f' \n *4*. Afraid that mosquito bites spreads virus ?*.  \n *5*. Are hand dryers effective in killing the new coronavirus?. \n *6*. Can an ultraviolet disinfection lamp kill the new coronavirus?. ' \
-               f' \n *7*. How effective are thermal scanners in detecting people infected with the new coronavirus?. \n *8*. Can spraying alcohol or chlorine all over your body kill the new coronavirus?. ' \
-               f' \n *9*. Do vaccines against pneumonia protect you against the new coronavirus?. \n*10*. Can regularly rinsing your nose with saline help prevent infection with the new coronavirus? ' \
-               f' \n *11*. Can eating garlic help prevent infection with the new coronavirus? \n *12*. Does the new coronavirus affect older people, or are younger people also susceptible?. ' \
-               f' \n *13*. Are antibiotics effective in preventing and treating the new coronavirus? \n *14* Are there any specific medicines to prevent or treat the new coronavirus? \n '
+        text = f'👇 Choose any below options to get the correct news on few myths (Source WHO (Myth busters))\n *1*. Do you still believe *hot/humid* climate does not spread Corona ? ' \
+               f' \n *2*. Does *Cold weather and snow* CANNOT kill the new coronavirus. \n *3*. Taking *hot bath* to kill virus ? ' \
+               f' \n *4*. Afraid that *mosquito bites* spreads virus ?*.  \n *5*. Are *hand dryers* effective in killing the new coronavirus?. \n *6*. Can an *ultraviolet disinfection lamp* kill the new coronavirus?. ' \
+               f' \n *7*. How effective are *thermal scanners* in detecting people infected with the new coronavirus?. \n *8*. Can *spraying alcohol or chlorine* all over your body kill the new coronavirus?. ' \
+               f' \n *9*. Do *vaccines against pneumonia* protect you against the new coronavirus?. \n*10*. Can regularly *rinsing your nose with saline* help prevent infection with the new coronavirus? ' \
+               f' \n *11*. Can *eating garlic* help prevent infection with the new coronavirus? \n *12*. Does the new coronavirus *affect older people, or are younger people also susceptible?*. ' \
+               f' \n *13*. Are *antibiotics effective in preventing* and treating the new coronavirus? \n *14* Are there *any specific medicines* to prevent or treat the new coronavirus? \n '
         msg.body(text)
-        if '1' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/52.tmb-1920v.png?sfvrsn=862374e_1')
-            msg.body(text)
-        elif '2' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-cold-snow.tmb-1920v.png?sfvrsn=1e557ba_1')
-            msg.body(text)
-        elif '3' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-hot-bath.tmb-1920v.png?sfvrsn=f1ebbc_1')
-            msg.body(text)
-        elif '4' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-mosquito-bite.tmb-1920v.png?sfvrsn=a1d90f6_1')
-            msg.body(text)
-        elif '5' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-27.tmb-1920v.png?sfvrsn=d17bc6bb_1')
-        elif '6' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbusters-31.tmb-1920v.png?sfvrsn=e5989655_1')
-        elif '7' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-25.tmb-1920v.png?sfvrsn=d3bf829c_2')
-        elif '8' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-33.tmb-1920v.png?sfvrsn=47bfd0aa_2')
-        elif '9' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/11.tmb-1920v.png?sfvrsn=97f2a51e_2')
-        elif '10' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/23.tmb-1920v.png?sfvrsn=c65dad38_3')
-        elif '11' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/19.tmb-1920v.png?sfvrsn=52adfc93_3')
-        elif '12' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbuster-2.tmb-1920v.png?sfvrsn=635d24e5_3')
-        elif '13' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbuster-3.tmb-1920v.png?sfvrsn=10657e42_3')
-        elif '14' in incoming_msg:
-            msg.media('https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbuster-4.tmb-1920v.png?sfvrsn=e163bada_3')
+        responded = True
+
+    if '1' in incoming_msg:
+        text = f'👇 Choose any below options to get the correct news on few myths (Source WHO (Myth busters))\n *1*. Do you still believe *hot/humid* climate does not spread Corona ? ' \
+               f' \n *2*. Does *Cold weather and snow* CANNOT kill the new coronavirus. \n *3*. Taking *hot bath* to kill virus ? ' \
+               f' \n *4*. Afraid that *mosquito bites* spreads virus ?*.  \n *5*. Are *hand dryers* effective in killing the new coronavirus?. \n *6*. Can an *ultraviolet disinfection lamp* kill the new coronavirus?. ' \
+               f' \n *7*. How effective are *thermal scanners* in detecting people infected with the new coronavirus?. \n *8*. Can *spraying alcohol or chlorine* all over your body kill the new coronavirus?. ' \
+               f' \n *9*. Do *vaccines against pneumonia* protect you against the new coronavirus?. \n*10*. Can regularly *rinsing your nose with saline* help prevent infection with the new coronavirus? ' \
+               f' \n *11*. Can *eating garlic* help prevent infection with the new coronavirus? \n *12*. Does the new coronavirus *affect older people, or are younger people also susceptible?*. ' \
+               f' \n *13*. Are *antibiotics effective in preventing* and treating the new coronavirus? \n *14* Are there *any specific medicines* to prevent or treat the new coronavirus? \n '
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/52.tmb-1920v.png?sfvrsn=862374e_1')
+        msg.body(text)
+        responded = True
+    if '2' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-cold-snow.tmb-1920v.png?sfvrsn=1e557ba_1')
+        responded = True
+    if '3' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-hot-bath.tmb-1920v.png?sfvrsn=f1ebbc_1')
+        responded = True
+    if '4' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-mosquito-bite.tmb-1920v.png?sfvrsn=a1d90f6_1')
+        responded = True
+    if '5' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-27.tmb-1920v.png?sfvrsn=d17bc6bb_1')
+        responded = True
+    if '6' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbusters-31.tmb-1920v.png?sfvrsn=e5989655_1')
+        responded = True
+    if '7' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-25.tmb-1920v.png?sfvrsn=d3bf829c_2')
+        responded = True
+    if '8' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-33.tmb-1920v.png?sfvrsn=47bfd0aa_2')
+        responded = True
+    if '9' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/11.tmb-1920v.png?sfvrsn=97f2a51e_2')
+        responded = True
+    if '10' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/23.tmb-1920v.png?sfvrsn=c65dad38_3')
+        responded = True
+    if '11' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/19.tmb-1920v.png?sfvrsn=52adfc93_3')
+        responded = True
+    if '12' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbuster-2.tmb-1920v.png?sfvrsn=635d24e5_3')
+        responded = True
+    if '13' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbuster-3.tmb-1920v.png?sfvrsn=10657e42_3')
+        responded = True
+    if '14' in incoming_msg:
+        msg.media(
+            'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbuster-4.tmb-1920v.png?sfvrsn=e163bada_3')
         responded = True
     if 'E' in incoming_msg:
         text = f'_Coronavirus spreads from an infected person through_ 👇 \n\n ♦ Small droplets from the nose or mouth which are spread when a person coughs or sneezes \n\n ♦ Touching an object or surface with these droplets on it and then touching your mouth, nose, or eyes before washing your hands \n \n ♦ Close personal contact, such as touching or shaking hands \n Please watch the video for more information 👇 https://youtu.be/0MgNgcwcKzE \n\n 👉 Type G to check the *Preventive Measures* \n 👉 Type *A, B, C, D, E* to see other options \n 👉 Type *Menu* to view the Main Menu'
