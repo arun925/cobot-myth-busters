@@ -2,20 +2,18 @@
 [![GitHub license](https://img.shields.io/github/license/Jatin-8898/covid-bot?logo=MIT)](https://github.com/arun925/cobot-self-analysis/blob/master/LICENSE)
 ![Python Badge](https://img.shields.io/badge/Made%20with-Python-blue)
 
-Whatsapp bot which provides the number of cases/deaths reported worldwide as well in some countries like
-* India 
-* USA 
-* China 
-* Italy
+Whatsapp bot which provides details on the latest updates in INDIA. It also helps in self analyzing and identify the fake news
 
 It also provides some prevention measures inspired from the Government of India Corona Bot.
 
 ## 🚀 Features
 - Stats of Corona Virus cases WorldWide
-- Stats of Corona Virus cases happening in India, USA, China, Italy
+- Stats of Corona Virus cases happening in India
+- Stats of Corona Virus cases happening in Indian statewise details
+- Contact details for statewise government phone numbers
 - How does it spread and how to prevent it?
-- Its reliable source of data 
-- Its ROBUST! 
+- Hospital and bed information - Statewise
+- Finding Fake news
 - Self Analysis questions
 
 ##  💻 Prereqisites
@@ -46,3 +44,5 @@ $ pip install request
 [Medium tutorial](https://www.twilio.com/blog/build-a-whatsapp-chatbot-with-python-flask-and-twilio)
 
 [Covid API](https://github.com/javieraviles/covidAPI)
+
+[Covid API INDIA](https://github.com/amodm/api-covid19-in)
