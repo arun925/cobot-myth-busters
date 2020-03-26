@@ -1,13 +1,13 @@
 from flask import Flask, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
-
+from datetime import date
 app = Flask(__name__)
 
 
 @app.route("/")
 def home():
-    return "'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates, self check on symptoms and identifying fake news .\n For any emergency 👇 \n 📞 Helpline: 011-23978046 | Toll-Free Number: 1075 \n ✉ Email: ncov2019@gov.in \n\n Please enter one of the following option 👇 \n *A*. Covid-19 statistics *Worldwide*. \n *B*. Covid-19 cases in *India*.  \n *C*. Statewise statistics in India. \n *D*. self-analysis. \n *E*. Identify Fake news \n *F*. How does it *Spread*? \n *G*. *Preventive measures* to be taken. \n *H*. *Contact Details - State wise."
+    return "'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates, and identifying fake news .\n For any emergency 👇 \n 📞 Helpline: 011-23978046 | Toll-Free Number: 1075 \n ✉ Email: ncov2019@gov.in \n\n Please enter one of the following option 👇 \n *A*. Covid-19 statistics *Worldwide*. \n *B*. Covid-19 cases in *India*.  \n *C*. Statewise statistics in India. \n *D*. self-analysis. \n *E*. Identify Fake news \n *F*. How does it *Spread*? \n *G*. *Preventive measures* to be taken. \n *H*. *Contact Details - State wise."
 
 
 @app.route('/bot', methods=['POST'])
@@ -17,11 +17,10 @@ def bot():
     msg = resp.message()
     responded = False
     temp_list = []
-    age_list = []
-    gender_list = []
+
 
     if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu' in incoming_msg:
-        text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates, self check on symptoms and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Self-Assessment* for COVID symptoms. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*?'
+        text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Daily Status report - WHO* worldwide. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*?'
         msg.body(text)
         responded = True
 
@@ -46,28 +45,10 @@ def bot():
         responded = True
 
     if 'B' in incoming_msg:
-        text = f'Hi , *Welcome to Self analyser*. \n\nThis has been developed based on the guidelines from *WHO* and *MHFW* government of India. \n\n*This interaction should not be taken as a expert medical advice*. \nFor any clarification on your personal symptoms please reach out to the concerned doctor. \n\n *Information shared here are not stored*'
+        today = date.today()
+        text = 'Hi , *WHO Daily status report - worldwide*. DATE - {}.'.format(today)
         msg.body(text)
-        text = f'\n Please enter the current Body temperature. Normal - 98.6F ' \
-               f'\n\n 1 - Normal (96 - 98.6 F)\n 2- Fever (98.6 - 102F) \n 3 - High Fever (>102) \n 4- I don’t know'
-        msg.body(text)
-        incoming_msg = request.values.get('Body', '')
-        if '1' == incoming_msg:
-            temp_list.append("low")
-        elif '2' == incoming_msg:
-            temp_list.append("medium")
-        elif '3' == incoming_msg:
-            temp_list.append("high")
-        elif '4' == incoming_msg:
-            temp_list.append("NA")
-        text = f'\n Please enter the age '
-        msg.body(text)
-        incoming_msg = request.values.get('Body', '')
-        age = incoming_msg
-        for val in temp_list:
-            if val == "high" or val == "medium":
-                text = "\n\n*Consult a doctor immediately for further screening. \n For any emergency 👇 \n 📞 Helpline: 011-23978046 | Toll-Free Number: 1075 \n ✉ Email: ncov2019@gov.in "
-                msg.body(text)
+        msg.media('https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200325-sitrep-65-covid-19.pdf')
         responded = True
 
     if 'A' in incoming_msg or 'Myth' in incoming_msg or 'myth' in incoming_msg or 'fake' in incoming_msg or 'Fake' in incoming_msg:
@@ -183,6 +164,10 @@ def bot():
 
     return str(resp)
 
+
+def age_question(msg):
+    text = f'\n Please enter the age '
+    msg.body(text)
 
 if __name__ == "__main__":
     app.run(debug=True)
