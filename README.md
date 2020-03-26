@@ -24,7 +24,7 @@ It also provides some prevention measures inspired from the Government of India 
 
 To use this bot simply send a WhatsApp message to **(+1) 415523 8886** with code **join weak-solid**.
 It will show a message saying connected to sandbox.
-Now start talking by saying  **Hi | India | USA | Italy** and it will display the followup chats.
+Now start talking by saying  **Hi or choose the listed available options.
 
 ### 📘 Installation
 
