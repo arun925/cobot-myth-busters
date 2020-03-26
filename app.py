@@ -154,7 +154,7 @@ def bot():
         msg.media(
             'https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
         responded = True
-    if 'V' in incoming_msg or 'Vaccine' in incoming_msg or 'vaccine' in incoming_msg:
+    if 'V' in incoming_msg or 'Vaccine' in incoming_msg or 'vaccine' in incoming_msg or 'v' in incoming_msgs:
         text = f'Latest Vaccine updates from WHO. "https://clinicaltrials.gov/ct2/show/NCT04283461?term=vaccine&cond=covid-19&draw=2&rank=4"'
         msg.body(text)
         msg.media('https://www.who.int/blueprint/priority-diseases/key-action/novel-coronavirus-landscape-ncov.pdf?ua=1')
