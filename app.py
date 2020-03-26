@@ -16,7 +16,7 @@ def bot():
     msg = resp.message()
     responded = False
 
-    if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu' in incoming_msg:
+    if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu'  in incoming_msg or "M" in incoming_msg or 'm' in incoming_msg:
         text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Daily Status report - WHO* worldwide. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*? \n *V*. What is *vaccine* updates ?'
         msg.body(text)
         responded = True
@@ -61,79 +61,79 @@ def bot():
     if '1' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/52.tmb-1920v.png?sfvrsn=862374e_1')
-        text = '\n 👉 Type *2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '2' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-cold-snow.tmb-1920v.png?sfvrsn=1e557ba_1')
-        text = '\n 👉 Type *3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake*  to view the Myth Menu'
+        text = '\n 👉 Type *3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake*  to view the Myth Menu'
         msg.body(text)
         responded = True
     if '3' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-hot-bath.tmb-1920v.png?sfvrsn=f1ebbc_1')
-        text = '\n 👉 Type *4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth*  or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth*  or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '4' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mb-mosquito-bite.tmb-1920v.png?sfvrsn=a1d90f6_1')
-        text = '\n 👉 Type *5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *5, 6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '5' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-27.tmb-1920v.png?sfvrsn=d17bc6bb_1')
 
-        text = '\n 👉 Type *6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *6, 7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '6' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbusters-31.tmb-1920v.png?sfvrsn=e5989655_1')
 
-        text = '\n 👉 Type *7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *7, 8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '7' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-25.tmb-1920v.png?sfvrsn=d3bf829c_2')
-        text = '\n 👉 Type *8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *8, 9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '8' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/mythbusters-33.tmb-1920v.png?sfvrsn=47bfd0aa_2')
 
-        text = '\n 👉 Type *9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *9, 10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '9' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/web-mythbusters/11.tmb-1920v.png?sfvrsn=97f2a51e_2')
 
-        text = '\n 👉 Type *10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *10, 11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '10' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/23.tmb-1920v.png?sfvrsn=c65dad38_3')
 
-        text = '\n 👉 Type *11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *11, 12, 13, 14* to see other options \n\n 👉 Type *Menu* *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '11' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/19.tmb-1920v.png?sfvrsn=52adfc93_3')
-        text = '\n 👉 Type *12, 13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *12, 13, 14* to see other options \n\n 👉 Type *Menu*  or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '12' == incoming_msg:
         msg.media(
             'https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/mythbuster-2.tmb-1920v.png?sfvrsn=635d24e5_3')
 
-        text = '\n 👉 Type *13, 14* to see other options \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
+        text = '\n 👉 Type *13, 14* to see other options \n\n 👉 Type *Menu*  or *M* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
     if '13' == incoming_msg:
@@ -149,7 +149,7 @@ def bot():
         msg.body(text)
         responded = True
     if 'E' in incoming_msg or 'spread' in incoming_msg or "Spread" in incoming_msg:
-        text = f'_Coronavirus spreads from an infected person through_ 👇 \n\n ♦ Small droplets from the nose or mouth which are spread when a person coughs or sneezes \n\n ♦ Touching an object or surface with these droplets on it and then touching your mouth, nose, or eyes before washing your hands \n \n ♦ Close personal contact, such as touching or shaking hands \n Please watch the video for more information 👇 https://youtu.be/0MgNgcwcKzE \n\n 👉 Type *V or Vaccine* to see vaccine related information \n\n 👉 Type *A, B, C, D* to see other options \n 👉 Type *Menu* to view the Main Menu'
+        text = f'_Coronavirus spreads from an infected person through_ 👇 \n\n ♦ Small droplets from the nose or mouth which are spread when a person coughs or sneezes \n\n ♦ Touching an object or surface with these droplets on it and then touching your mouth, nose, or eyes before washing your hands \n \n ♦ Close personal contact, such as touching or shaking hands \n Please watch the video for more information 👇 https://youtu.be/0MgNgcwcKzE \n\n 👉 Type *V or Vaccine* to see vaccine related information \n\n 👉 Type *A, B, C, D* to see other options \n 👉 Type *Menu* or *M* to view the Main Menu'
         msg.body(text)
         msg.media(
             'https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
