@@ -17,7 +17,7 @@ def bot():
     responded = False
 
     if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu' in incoming_msg:
-        text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Daily Status report - WHO* worldwide. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*?'
+        text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Daily Status report - WHO* worldwide. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*? \n *V*. What is *vaccine* updates ?'
         msg.body(text)
         responded = True
 
@@ -149,12 +149,12 @@ def bot():
         msg.body(text)
         responded = True
     if 'E' in incoming_msg or 'spread' in incoming_msg or "Spread" in incoming_msg:
-        text = f'_Coronavirus spreads from an infected person through_ 👇 \n\n ♦ Small droplets from the nose or mouth which are spread when a person coughs or sneezes \n\n ♦ Touching an object or surface with these droplets on it and then touching your mouth, nose, or eyes before washing your hands \n \n ♦ Close personal contact, such as touching or shaking hands \n Please watch the video for more information 👇 https://youtu.be/0MgNgcwcKzE \n\n 👉 Type *A, B, C, D* to see other options \n 👉 Type *Menu* to view the Main Menu'
+        text = f'_Coronavirus spreads from an infected person through_ 👇 \n\n ♦ Small droplets from the nose or mouth which are spread when a person coughs or sneezes \n\n ♦ Touching an object or surface with these droplets on it and then touching your mouth, nose, or eyes before washing your hands \n \n ♦ Close personal contact, such as touching or shaking hands \n Please watch the video for more information 👇 https://youtu.be/0MgNgcwcKzE \n\n 👉 Type *V or Vaccine* to see vaccine related information \n\n 👉 Type *A, B, C, D* to see other options \n 👉 Type *Menu* to view the Main Menu'
         msg.body(text)
         msg.media(
             'https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
         responded = True
-    if 'V' in incoming_msg or 'Vaccine' in incoming_msg or 'vaccine' in incoming_msg or 'v' in incoming_msgs:
+    if 'V' in incoming_msg or 'Vaccine' in incoming_msg or 'vaccine' in incoming_msg or 'v' in incoming_msg:
         text = f'Latest Vaccine updates from WHO. "https://clinicaltrials.gov/ct2/show/NCT04283461?term=vaccine&cond=covid-19&draw=2&rank=4"'
         msg.body(text)
         msg.media('https://www.who.int/blueprint/priority-diseases/key-action/novel-coronavirus-landscape-ncov.pdf?ua=1')
