@@ -11,7 +11,6 @@ It also provides some prevention measures inspired from the Government of India 
 - Stats of Corona Virus cases happening in India
 - How does it spread and how to prevent it?
 - Finding Fake news or myth busters
-- Self Analysis questions
 
 ##  💻 Prereqisites
 * [Python 3.7](https://www.python.org/downloads/) or newer
