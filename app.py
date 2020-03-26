@@ -1,7 +1,6 @@
 from flask import Flask, request
 import requests
 from twilio.twiml.messaging_response import MessagingResponse
-from datetime import date
 app = Flask(__name__)
 
 
@@ -16,8 +15,6 @@ def bot():
     resp = MessagingResponse()
     msg = resp.message()
     responded = False
-    temp_list = []
-
 
     if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu' in incoming_msg:
         text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Daily Status report - WHO* worldwide. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*?'
@@ -45,8 +42,7 @@ def bot():
         responded = True
 
     if 'B' in incoming_msg:
-        today = date.today()
-        text = 'Hi , *WHO Daily status report - worldwide*. DATE - {}.'.format(today)
+        text = f'Hi , *WHO Daily status report - worldwide*. DATE 26/3/2020.'
         msg.body(text)
         msg.media('https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200325-sitrep-65-covid-19.pdf')
         responded = True
@@ -152,11 +148,16 @@ def bot():
         text = ' \n\n 👉 Type *Menu* to view the Main Menu \n\n 👉 Type *Myth* or *Fake* to view the Myth Menu'
         msg.body(text)
         responded = True
-    if 'E' in incoming_msg:
+    if 'E' in incoming_msg or 'spread' in incoming_msg or "Spread" in incoming_msg:
         text = f'_Coronavirus spreads from an infected person through_ 👇 \n\n ♦ Small droplets from the nose or mouth which are spread when a person coughs or sneezes \n\n ♦ Touching an object or surface with these droplets on it and then touching your mouth, nose, or eyes before washing your hands \n \n ♦ Close personal contact, such as touching or shaking hands \n Please watch the video for more information 👇 https://youtu.be/0MgNgcwcKzE \n\n 👉 Type *A, B, C, D* to see other options \n 👉 Type *Menu* to view the Main Menu'
         msg.body(text)
         msg.media(
             'https://user-images.githubusercontent.com/34777376/77290801-f2421280-6d02-11ea-8b08-fdb516af3d5a.jpeg')
+        responded = True
+    if 'V' in incoming_msg or 'Vaccine' in incoming_msg or 'vaccine' in incoming_msg:
+        text = f'Latest Vaccine updates from WHO. "https://clinicaltrials.gov/ct2/show/NCT04283461?term=vaccine&cond=covid-19&draw=2&rank=4"'
+        msg.body(text)
+        msg.media('https://www.who.int/blueprint/priority-diseases/key-action/novel-coronavirus-landscape-ncov.pdf?ua=1')
         responded = True
 
     if responded == False:
@@ -164,10 +165,6 @@ def bot():
 
     return str(resp)
 
-
-def age_question(msg):
-    text = f'\n Please enter the age '
-    msg.body(text)
 
 if __name__ == "__main__":
     app.run(debug=True)
