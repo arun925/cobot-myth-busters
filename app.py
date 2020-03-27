@@ -16,7 +16,7 @@ def bot():
     msg = resp.message()
     responded = False
 
-    if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu'  in incoming_msg or "M" in incoming_msg or 'm' in incoming_msg:
+    if 'Hi' in incoming_msg or 'Hey' in incoming_msg or 'Menu' in incoming_msg or "M" in incoming_msg or 'm' in incoming_msg:
         text = f'Hello 🙋🏽‍♂, \nThis is a Covid-whatsapp-Bot to provide latest information updates and identifying fake news . \n\n Please enter one of the following option 👇 \n *A*. *Fake news* Identification (Myth Busters) \n *B*. *Daily Status report - WHO* worldwide. \n *C*. Covid-19 statistics *Worldwide*. \n *D*. Covid-19 cases in *India*.  \n *E*. How does it *Spread*? \n *V*. What is *vaccine* updates ?'
         msg.body(text)
         responded = True
@@ -44,7 +44,7 @@ def bot():
     if 'B' in incoming_msg:
         text = f'Hi , *WHO Daily status report - worldwide*. DATE 26/3/2020.'
         msg.body(text)
-        msg.media('https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200325-sitrep-65-covid-19.pdf')
+        msg.media('https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200326-sitrep-66-covid-19.pdf?sfvrsn=81b94e61_2')
         responded = True
 
     if 'A' in incoming_msg or 'Myth' in incoming_msg or 'myth' in incoming_msg or 'fake' in incoming_msg or 'Fake' in incoming_msg:
